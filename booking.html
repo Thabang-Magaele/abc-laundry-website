@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book a laundry or dry-cleaning collection with ABC Laundry & Dry Cleaners. Free pickup and delivery, instant price estimate." />
+  <title>Book a Collection | ABC Laundry &amp; Dry Cleaners</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">ABC</span>
+        <span class="brand-text">Laundry &amp; Dry Cleaners</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#how">How It Works</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="booking.html" class="btn btn-primary btn-sm">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Booking -->
+  <section class="booking-hero">
+    <div class="container">
+      <p class="eyebrow">Two minutes, that's it</p>
+      <h1>Book your collection</h1>
+      <p class="booking-sub">Tell us what you need and when. Your booking is sent to us on WhatsApp, and we collect free of charge.</p>
+    </div>
+  </section>
+
+  <section class="section booking-section">
+    <div class="container booking-grid">
+      <!-- Form -->
+      <form class="booking-form" id="bookingForm" novalidate>
+        <div class="form-step-head">
+          <h2>1. Your details</h2>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Thandiwe Nkosi" required />
+            <span class="error" data-for="name"></span>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. 082 123 4567" required />
+            <span class="error" data-for="phone"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="address">Collection address *</label>
+            <input type="text" id="address" name="address" placeholder="Street, suburb, town" required />
+            <span class="error" data-for="address"></span>
+          </div>
+        </div>
+
+        <div class="form-step-head">
+          <h2>2. Choose services</h2>
+          <p class="hint">Select all that apply and enter quantities for an instant estimate.</p>
+        </div>
+
+        <div class="service-options">
+          <label class="service-option">
+            <input type="checkbox" class="svc-check" data-price="35" data-unit="kg" data-label="Wash &amp; Fold" />
+            <span class="svc-body">
+              <span class="svc-name">Wash &amp; Fold</span>
+              <span class="svc-price">R35 / kg</span>
+            </span>
+            <input type="number" class="svc-qty" min="0" value="0" aria-label="Wash and fold kilograms" />
+          </label>
+
+          <label class="service-option">
+            <input type="checkbox" class="svc-check" data-price="55" data-unit="item" data-label="Dry Cleaning" />
+            <span class="svc-body">
+              <span class="svc-name">Dry Cleaning</span>
+              <span class="svc-price">R55 / item</span>
+            </span>
+            <input type="number" class="svc-qty" min="0" value="0" aria-label="Dry cleaning items" />
+          </label>
+
+          <label class="service-option">
+            <input type="checkbox" class="svc-check" data-price="15" data-unit="item" data-label="Ironing" />
+            <span class="svc-body">
+              <span class="svc-name">Ironing &amp; Pressing</span>
+              <span class="svc-price">R15 / item</span>
+            </span>
+            <input type="number" class="svc-qty" min="0" value="0" aria-label="Ironing items" />
+          </label>
+
+          <label class="service-option">
+            <input type="checkbox" class="svc-check" data-price="120" data-unit="item" data-label="Duvet / Bedding" />
+            <span class="svc-body">
+              <span class="svc-name">Duvets &amp; Bedding</span>
+              <span class="svc-price">R120 / item</span>
+            </span>
+            <input type="number" class="svc-qty" min="0" value="0" aria-label="Duvet items" />
+          </label>
+        </div>
+        <span class="error" data-for="services"></span>
+
+        <div class="form-step-head">
+          <h2>3. Pickup &amp; options</h2>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="date">Preferred collection date *</label>
+            <input type="date" id="date" name="date" required />
+            <span class="error" data-for="date"></span>
+          </div>
+          <div class="field">
+            <label for="time">Preferred time</label>
+            <select id="time" name="time">
+              <option value="Morning (7:30–10:30)">Morning (7:30–10:30)</option>
+              <option value="Midday (10:30–13:00)">Midday (10:30–13:00)</option>
+              <option value="Afternoon (13:00–17:00, Mon–Fri only)">Afternoon (13:00–17:00, Mon–Fri only)</option>
+            </select>
+            <span class="hint">We're open Mon–Fri 7:30–17:00 and Sat 7:30–13:00. Closed Sundays.</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="notes">Notes (stains, special instructions)</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="e.g. Red wine stain on the white shirt; ring the buzzer for unit 4B."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Send Booking via WhatsApp</button>
+        <p class="form-disclaimer">Your booking opens in WhatsApp as a ready-to-send message to our team. No payment is taken online.</p>
+      </form>
+
+      <!-- Summary -->
+      <aside class="booking-summary">
+        <div class="summary-card">
+          <h3>Order summary</h3>
+          <ul class="summary-lines" id="summaryLines">
+            <li class="summary-empty">No services selected yet.</li>
+          </ul>
+          <div class="summary-total">
+            <span>Estimated total</span>
+            <strong id="summaryTotal">R0.00</strong>
+          </div>
+          <p class="summary-note">Estimate only — final price confirmed on collection. Collection &amp; delivery are free in our service area.</p>
+        </div>
+        <div class="summary-help">
+          <p>Prefer to talk to us?</p>
+          <a href="https://wa.me/27832789040" target="_blank" rel="noopener" class="btn btn-outline btn-block">WhatsApp 083 278 9040</a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Success message -->
+    <div class="booking-success container" id="bookingSuccess" hidden>
+      <div class="success-card">
+        <div class="success-ico">✓</div>
+        <h2>Booking request received!</h2>
+        <p id="successText">Thanks, we've got your details and will call you shortly to confirm your collection.</p>
+        <div class="success-actions">
+          <a href="index.html" class="btn btn-outline">Back to Home</a>
+          <button type="button" class="btn btn-primary" id="newBooking">Make Another Booking</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> ABC Laundry &amp; Dry Cleaners. All rights reserved.</p>
+        <p><a href="index.html">Home</a> · <a href="index.html#contact">Contact</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
