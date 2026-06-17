@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Book a laundry or dry-cleaning collection with ABC Laundry & Dry Cleaners. Free pickup and delivery, instant price estimate." />
-  <title>Book a Collection | ABC Laundry &amp; Dry Cleaners</title>
+  <meta name="description" content="Book a laundry collection with Mbombela Laundry. Monthly R800 wash or once-off baskets from R160. Free collection and delivery all over Mbombela." />
+  <title>Book a Collection | Mbombela Laundry</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,8 +15,8 @@
   <header class="site-header">
     <nav class="nav container">
       <a href="index.html" class="brand">
-        <span class="brand-mark">ABC</span>
-        <span class="brand-text">Laundry &amp; Dry Cleaners</span>
+        <span class="brand-mark">ML</span>
+        <span class="brand-text">Mbombela Laundry</span>
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -24,9 +24,9 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#pricing">Pricing</a></li>
         <li><a href="index.html#how">How It Works</a></li>
+        <li><a href="index.html#areas">Service Areas</a></li>
         <li><a href="index.html#contact">Contact</a></li>
         <li><a href="booking.html" class="btn btn-primary btn-sm">Book Now</a></li>
       </ul>
@@ -38,7 +38,7 @@
     <div class="container">
       <p class="eyebrow">Two minutes, that's it</p>
       <h1>Book your collection</h1>
-      <p class="booking-sub">Tell us what you need and when. Your booking is sent to us on WhatsApp, and we collect free of charge.</p>
+      <p class="booking-sub">Choose the monthly wash or a once-off basket. Your booking is sent straight to us on WhatsApp, and collection &amp; delivery are free all over Mbombela.</p>
     </div>
   </section>
 
@@ -64,51 +64,74 @@
         <div class="form-row">
           <div class="field">
             <label for="address">Collection address *</label>
-            <input type="text" id="address" name="address" placeholder="Street, suburb, town" required />
+            <input type="text" id="address" name="address" placeholder="Street &amp; suburb (e.g. West Acres)" required />
             <span class="error" data-for="address"></span>
+          </div>
+          <div class="field">
+            <label for="area">Area</label>
+            <select id="area" name="area">
+              <option value="Mbombela (Central)">Mbombela (Central)</option>
+              <option value="Nelspruit">Nelspruit</option>
+              <option value="West Acres">West Acres</option>
+              <option value="Sonheuwel">Sonheuwel</option>
+              <option value="Steiltes">Steiltes</option>
+              <option value="Stonehenge">Stonehenge</option>
+              <option value="Valencia Park">Valencia Park</option>
+              <option value="Riverside Park">Riverside Park</option>
+              <option value="Kamagugu">Kamagugu</option>
+              <option value="Rocky's Drift">Rocky's Drift</option>
+              <option value="Plaston">Plaston</option>
+              <option value="White River">White River</option>
+              <option value="Kanyamazane">Kanyamazane</option>
+              <option value="Pienaar">Pienaar</option>
+              <option value="Msogwaba">Msogwaba</option>
+              <option value="Tekwane South &amp; North">Tekwane South &amp; North</option>
+              <option value="Kabokweni">Kabokweni</option>
+              <option value="Other (Mbombela &amp; surrounds)">Other (Mbombela &amp; surrounds)</option>
+            </select>
           </div>
         </div>
 
         <div class="form-step-head">
-          <h2>2. Choose services</h2>
-          <p class="hint">Select all that apply and enter quantities for an instant estimate.</p>
+          <h2>2. Choose your service</h2>
+          <p class="hint">Pick the monthly plan or enter how many once-off baskets you'd like.</p>
         </div>
 
         <div class="service-options">
           <label class="service-option">
-            <input type="checkbox" class="svc-check" data-price="35" data-unit="kg" data-label="Wash &amp; Fold" />
+            <input type="checkbox" class="svc-check" data-price="800" data-unit="month" data-label="Monthly Laundry Wash" />
             <span class="svc-body">
-              <span class="svc-name">Wash &amp; Fold</span>
-              <span class="svc-price">R35 / kg</span>
+              <span class="svc-name">Monthly Laundry Wash <span class="svc-tag">Save 50%</span></span>
+              <span class="svc-price">R800 / month</span>
             </span>
-            <input type="number" class="svc-qty" min="0" value="0" aria-label="Wash and fold kilograms" />
+            <input type="number" class="svc-qty" min="0" value="0" aria-label="Monthly subscriptions" />
           </label>
 
           <label class="service-option">
-            <input type="checkbox" class="svc-check" data-price="55" data-unit="item" data-label="Dry Cleaning" />
+            <input type="checkbox" class="svc-check" data-price="160" data-unit="basket" data-label="Small Basket" />
             <span class="svc-body">
-              <span class="svc-name">Dry Cleaning</span>
-              <span class="svc-price">R55 / item</span>
+              <span class="svc-name">Small Basket</span>
+              <span class="svc-price">R160 / basket</span>
             </span>
-            <input type="number" class="svc-qty" min="0" value="0" aria-label="Dry cleaning items" />
+            <input type="number" class="svc-qty" min="0" value="0" aria-label="Small baskets" />
           </label>
 
           <label class="service-option">
-            <input type="checkbox" class="svc-check" data-price="15" data-unit="item" data-label="Ironing" />
+            <input type="checkbox" class="svc-check" data-price="230" data-unit="basket" data-label="Medium Basket" />
             <span class="svc-body">
-              <span class="svc-name">Ironing &amp; Pressing</span>
-              <span class="svc-price">R15 / item</span>
+              <span class="svc-name">Medium Basket</span>
+              <span class="svc-price">R230 / basket</span>
             </span>
-            <input type="number" class="svc-qty" min="0" value="0" aria-label="Ironing items" />
+            <input type="number" class="svc-qty" min="0" value="0" aria-label="Medium baskets" />
           </label>
 
           <label class="service-option">
-            <input type="checkbox" class="svc-check" data-price="120" data-unit="item" data-label="Duvet / Bedding" />
+            <input type="checkbox" class="svc-check" data-price="260" data-unit="basket" data-label="Large Basket" />
             <span class="svc-body">
-              <span class="svc-name">Duvets &amp; Bedding</span>
-              <span class="svc-price">R120 / item</span>
+              <span class="svc-name">Large Basket</span>
+              <span class="svc-price">R260 / basket</span>
             </span>
-            <input type="number" class="svc-qty" min="0" value="0" aria-label="Duvet items" />
+            <input type="number" class="svc-qty" min="0" value="0" aria-label="Large baskets" />
           </label>
         </div>
         <span class="error" data-for="services"></span>
@@ -127,17 +150,17 @@
             <select id="time" name="time">
               <option value="Morning (7:30–10:30)">Morning (7:30–10:30)</option>
               <option value="Midday (10:30–13:00)">Midday (10:30–13:00)</option>
-              <option value="Afternoon (13:00–17:00, Mon–Fri only)">Afternoon (13:00–17:00, Mon–Fri only)</option>
+              <option value="Afternoon (13:00–17:00)">Afternoon (13:00–17:00)</option>
             </select>
-            <span class="hint">We're open Mon–Fri 7:30–17:00 and Sat 7:30–13:00. Closed Sundays.</span>
+            <span class="hint">We're open Mon–Sat 7:30–17:00. Closed Sundays.</span>
           </div>
         </div>
         <div class="field">
-          <label for="notes">Notes (stains, special instructions)</label>
-          <textarea id="notes" name="notes" rows="3" placeholder="e.g. Red wine stain on the white shirt; ring the buzzer for unit 4B."></textarea>
+          <label for="notes">Notes (special instructions)</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="e.g. Ring the buzzer for unit 4B; separate the whites please."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-block btn-lg">Send Booking via WhatsApp</button>
+        <button type="submit" class="btn btn-whatsapp btn-block btn-lg"><span class="wa-ico">💬</span> Send Booking via WhatsApp</button>
         <p class="form-disclaimer">Your booking opens in WhatsApp as a ready-to-send message to our team. No payment is taken online.</p>
       </form>
 
@@ -146,17 +169,17 @@
         <div class="summary-card">
           <h3>Order summary</h3>
           <ul class="summary-lines" id="summaryLines">
-            <li class="summary-empty">No services selected yet.</li>
+            <li class="summary-empty">No service selected yet.</li>
           </ul>
           <div class="summary-total">
             <span>Estimated total</span>
             <strong id="summaryTotal">R0.00</strong>
           </div>
-          <p class="summary-note">Estimate only — final price confirmed on collection. Collection &amp; delivery are free in our service area.</p>
+          <p class="summary-note">Estimate only — final price confirmed on collection. Collection &amp; delivery are free all over Mbombela.</p>
         </div>
         <div class="summary-help">
           <p>Prefer to talk to us?</p>
-          <a href="https://wa.me/27832789040" target="_blank" rel="noopener" class="btn btn-outline btn-block">WhatsApp 083 278 9040</a>
+          <a href="https://wa.me/27615871600" target="_blank" rel="noopener" class="btn btn-outline btn-block">WhatsApp 061 587 1600</a>
         </div>
       </aside>
     </div>
@@ -165,8 +188,8 @@
     <div class="booking-success container" id="bookingSuccess" hidden>
       <div class="success-card">
         <div class="success-ico">✓</div>
-        <h2>Booking request received!</h2>
-        <p id="successText">Thanks, we've got your details and will call you shortly to confirm your collection.</p>
+        <h2>Booking request ready!</h2>
+        <p id="successText">Thanks, we've got your details and will confirm your collection shortly.</p>
         <div class="success-actions">
           <a href="index.html" class="btn btn-outline">Back to Home</a>
           <button type="button" class="btn btn-primary" id="newBooking">Make Another Booking</button>
@@ -179,11 +202,14 @@
   <footer class="site-footer">
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; <span id="year"></span> ABC Laundry &amp; Dry Cleaners. All rights reserved.</p>
-        <p><a href="index.html">Home</a> · <a href="index.html#contact">Contact</a></p>
+        <p>&copy; <span id="year"></span> Mbombela Laundry. All rights reserved.</p>
+        <p><a href="index.html">Home</a> · <a href="index.html#contact">Contact</a> · <a href="https://wa.me/27615871600" target="_blank" rel="noopener">WhatsApp</a></p>
       </div>
     </div>
   </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/27615871600" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">💬</a>
 
   <script src="main.js"></script>
 </body>

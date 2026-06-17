@@ -1,5 +1,5 @@
 /* =========================================================
-   ABC Laundry & Dry Cleaners — main.js
+   Mbombela Laundry — main.js
    Handles: mobile nav, footer year, booking estimate & validation
    ========================================================= */
 
@@ -36,7 +36,7 @@
   const form = document.getElementById("bookingForm");
   if (!form) return;
 
-  const WHATSAPP_NUMBER = "27832789040"; // 083 278 9040 in international format
+  const WHATSAPP_NUMBER = "27615871600"; // 061 587 1600 in international format
   const currency = function (n) {
     return "R" + n.toFixed(2);
   };
@@ -98,7 +98,7 @@
     if (lines.length === 0) {
       const li = document.createElement("li");
       li.className = "summary-empty";
-      li.textContent = "No services selected yet.";
+      li.textContent = "No service selected yet.";
       summaryLines.appendChild(li);
     } else {
       lines.forEach(function (line) {
@@ -236,13 +236,16 @@
     const time = document.getElementById("time").value;
     const notes = document.getElementById("notes").value.trim();
 
+    const area = (document.getElementById("area") || {}).value || "";
+
     const L = []; // message lines
-    L.push("*ABC LAUNDRY & DRY CLEANERS*");
+    L.push("*MBOMBELA LAUNDRY*");
     L.push("*New Booking Request*");
     L.push("--------------------------------");
     L.push("*Customer:* " + name);
     L.push("*Phone:* " + phone);
     L.push("*Collect from:* " + address);
+    if (area) L.push("*Area:* " + area);
     L.push("*Date:* " + date);
     L.push("*Time:* " + time);
     L.push("--------------------------------");
@@ -285,7 +288,7 @@
         "Thanks " + name.split(" ")[0] +
         "! Your booking (estimated total " + total +
         ") is ready in WhatsApp — just press send to reach our team. " +
-        "If WhatsApp didn't open, message us on 083 278 9040.";
+        "If WhatsApp didn't open, message us on 061 587 1600.";
     }
     if (successBox) {
       successBox.hidden = false;
